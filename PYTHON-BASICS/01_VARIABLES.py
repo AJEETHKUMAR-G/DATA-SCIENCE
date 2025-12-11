@@ -1,4 +1,4 @@
-#2. VARIABLES:
+
 
 x = 42 # "x" holds the value 42
 print("the number is", x)
