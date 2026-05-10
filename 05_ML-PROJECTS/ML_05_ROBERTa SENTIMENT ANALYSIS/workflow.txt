@@ -1,0 +1,18 @@
+step -1 : CREATE A VIRTUAL ENVIRONMENT
+            - python -m venv env
+            - [if there is an error in activation use->>]set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+            - .\env\Scripts\activate
+step -2 : USE THIS TO AVOID CLASS ISSUES BY TORCH 
+            import sys
+            import torch
+            torch_classes = getattr(torch, "classes", None)
+            if isinstance(torch_classes, type(sys)):  
+                torch_classes.__path__ = []
+
+step -3: INSTALL REQUIRED LIBRARY
+            -  pip install matplotlib scipy transformers streamlit huggingface_hub[hf_xet] torch torchvision torchaudio
+step -3 : ANALYSE ROBERTa FOR Reviews.csv 
+            - ROBERTaSentimentAnalysis.ipynb
+step -4: USE PRETRAINED ROBERTa MODEL AND CREATE STREAMLIT APPLICATION AND RUN IT
+            - "cardiffnlp/twitter-roberta-base-sentiment"
+            - streamlit run app.py
