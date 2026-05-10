@@ -1,0 +1,51 @@
+CLEANING THE DATASET IN POWER BI:
+=================================
+1. Import a dataset in power bi.
+2. Transform the loaded data.
+3. Then choose the column want to analyse.
+	# Home ribben-choose column-select columns want to analyse.
+		#Selected columns are (Item,Price Per Unit,Quantity,Total Spent).
+4. Then analyse the columns if there is an error or any miss value or any null value are there.
+	# There is an (Blank,Unkown,Error).
+5. Using the replace value change "Blank,Unkown,Error" in "Price Per Unit,Quantity,Total Spent" into null.
+6. Then change datatype in Price Per Unit(Decimal),Quantity(Whole number),Total Spent(Decimal).
+7. Then find Price Per Unit by dividing Total Spent by Quantity the in price per unit there is an null value using the condition column remove the null value in new price per unit.
+	# Condition Column:
+		*if new price per unit = null.
+			Output-price per unit.
+		*else:
+			Output-new price per unit.
+8. By dividing new price per unit and Total spend find the quantity after finding there is null in new quantity to remove using the condition column remove the null value in new quantity.
+	# Condition Column:
+		*if new Quantity = null.
+			Output-Quantity.
+		*else:
+			Output-new Quantuty.
+9. Then multiply new price per unit and new quantity find the new total spent after finding there is a null in new total spent to remove using the condition column remove the null value in new total spent.
+	# Condition Column:
+		*if new total spent = null.
+			Output-total spent.
+		*else:
+			Output-new total spent.
+10. After finishing this then remove the old price per unit ,quantity,total spent.
+11. Then apply filter function in new price per unit to remove null:
+	#First filter the value by 1 in new price per unit to remove null.
+	#Then filter the value by 1.5 in new price per unit to remove null.
+	#Then filter the value by 2 in new price per unit to remove null.
+	#Then filter the value by 3 in new price per unit to remove null.
+	#Then filter the value by 4 in new price per unit to remove null.
+	#Then filter the value by 5 in new price per unit to remove null.
+	#Then filter the value by "null" in new price per unit to remove null.
+		*In 'null' filter using indexing i remove the null in "Item and Price per unit" after finish this step i remove indexing column.
+
+12. After finsh this all above step append the new table which have no null data.
+	# Home-append Queries-append Queries new-add the table want to append.
+
+
+
+
+
+
+		
+	
+	

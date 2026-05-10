@@ -1,0 +1,32 @@
+OPERATORS:
+
+ARITHMETIC OPERATORS:
+
+Arith_add = Data[Cost Amount] + Data[Sales Amount]
+Arith_sub = Data[Sales Amount] - Data[Cost Amount]
+Arith_mul = Data[Quantity] * Data[Sales Amount]
+Arith_div = Data[Arith_sub] / Data[Profit]
+Arith_exp = Data[Profit] ^ 2
+
+COMPARISON OPERATORS:
+
+Comp_eq = Data[Ordertype name] = "On Shop" # USE CASE CHECK BLANK()
+Comp_deq = Data[Token number]== "0" # USED IN RLS
+Comp_gr = Data[Arith_add] > 41000
+Comp_ls = Data[Arith_add]<50000
+Comp_gre = Data[Arith_add]>=50000
+Comp_lse = Data[Arith_add]<=50000
+Comp_ne = Data[Customer name]<>"Naga"
+
+TEXT CONCATENATIONN OPERATOR:
+
+Text_concat = Data[Product name]&" - "& Data[Product Category]
+
+LOGICAL OPERATORS:
+
+Log_and = (Data[Customer name] = "Naga") && (Data[Status] = "Ordered")
+Log_or = (Data[Customer name] = "Naga") || (Data[Status] = "Ordered")
+Log_in = Data[Customer name] IN {"Naga","Mahesh"}
+
+
+

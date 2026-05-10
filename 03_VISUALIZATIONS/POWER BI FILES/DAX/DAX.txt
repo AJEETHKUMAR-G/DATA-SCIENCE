@@ -1,0 +1,45 @@
+DAX is a library of functions and operators combined to build formulas and
+expressions. 
+
+Also known as Function Language, where the full code is kept inside a function.
+
+CALCULATED COLUMNS:
+
+* Expands table by creating new column
+* Stored along with table, Consumes Memory
+* Less analytical capability
+* It refers a column
+
+Eg: New Prod = [Product Item] &" - "&[Product Category]
+    Profit = [Sales Amount] - [Cost Amount]
+
+MEASURE:
+
+* Summarizes data into a single value
+* Calculate at runtime
+* Rich analytical capability
+* It refers a value
+
+Eg: Total Profit = Sum([Sales Amount]) - Sum([Cost Amount])
+    
+Creating Calculated column and measure
+
+Load **DATA** 
+
+We need to combine product name and category name
+
+Click on Data Sheet -> NEW COLUMN -> Product FullName = Data[Product name] &" - "& Data[Product Category]
+
+Apply the above formula
+
+For Measure
+
+Total Sales = SUM(Data[Sales Amount])
+
+Eg:
+
+Profit Calcol = Data[Sales Amount] - Data[Cost Amount]
+
+ProfitMeasure = SUM(Data[Sales Amount]) - SUM(Data[Cost Amount]) 
+
+Prev Yr Sale = CALCULATE(SUM(Data[Sales Amount]),SAMEPERIODLASTYEAR(Data[Sale date].[Date]))
