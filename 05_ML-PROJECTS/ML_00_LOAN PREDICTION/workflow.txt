@@ -1,0 +1,6 @@
+step 1: python -m venv env
+        Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+        env\Scripts\activate
+step 2: install all libraries 
+step 3: python -m pip install streamlit joblib
+        python -m streamlit run app.py
