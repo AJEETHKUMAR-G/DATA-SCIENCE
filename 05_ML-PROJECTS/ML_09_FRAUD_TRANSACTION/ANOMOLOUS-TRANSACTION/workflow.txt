@@ -1,0 +1,23 @@
+step 1: Install Visual Studio Code and Jupyter Notebook.
+        - VSCodeUserSetup-x64-1.87.2
+        - Anaconda3-2024.06-1-Windows-x86_64
+
+step 2: Open a .py file and Create a virtual environment
+        - python -m venv env
+        - env\Scripts\activate
+
+step 3: Install required Libraries
+        -  pip install numpy pandas scikit-learn streamlit tensorflow joblib imbalanced-learn
+
+step 4: Write model training and streamlit file
+        - train_model.py
+        - app.py
+
+step 5: Run Model training
+        - python train_model.py
+
+step 6: Run Front end 
+        - streamlit run app.py
+        
+step 7: Adjustments
+        - change the values and predict 
